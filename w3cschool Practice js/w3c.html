@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <h1 id="demo1">javascript</h1>
+  <p id="demo">hiiiiiiiiiiii</p>
+  <!--<button onclick="myfunction()">let's change</button>
+  <button onclick="hello()">change languages</button>
+ 
+  <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">click me</button>
+  <button onclick="document.getElementById('demo').style.fontSize='35px'">change font size</button>
+  <button onclick="document.getElementById('demo').style.display='none'">hide display</button>
+  <button onclick="document.getElementById('demo').style.display='block'">show display</button>-->
+  <!--<button onclick="window.print()">print page</button>-->
+  <p id="demo"></p>
+  <script>
+   // function myfunction()
+    //{
+    //document.getElementById('demo').innerHTML = 'javascript';
+    //}
+    //function hello()
+    //{
+     //   document.getElementById('demo1').innerText = 'Html Css'
+    //}
+  //ocument.write(5+6);
+ // window.alert(2+2);
+//window.alert(4+4);
+//window.alert(5+6);
+//alert(5+5);
+//console.log("hello");
+//window.print("dwira");
+//let x = 5;
+//document.getElementById('demo').innerHTML=x+10;
+//document.getElementById('demo').innerHTML=(2+2)*3;
+//document.getElementById('demo').innerHTML= "seema" + " " +"zala";
+
+//let x = 8;
+//x++;
+//let z=x;
+//document.getElementById('demo1').innerHTML= x ** 2;
+
+
+//let a=6;
+//a--;
+//b=a;
+
+//document.getElementById('demo').innerHTML = Math.pow(a,2);
+//document.getElementById('demo').innerHTML = 150+100*30;
+
+/*let text="123456"
+let min= Math.min(...text)
+let max = Math.max(...text)
+
+document.getElementById('demo').innerHTML = "minimum number is : " + min + "<br> maximaum number is : " + max;
+*/
+
+/*if (new Date().getHours() < 18 )
+{
+  document.getElementById('demo').innerHTML = "good day";
+}*/
+/*let age = 18;
+let text = "you can not drive...";
+if (age >= 18 )
+{
+  text="you can drive";
+}
+document.getElementById('demo').innerHTML = text;
+let greetings;
+if(new Date().getHours() < 18)
+{
+  greetings = "good day!.....";
+}
+else
+{
+  greetings = "good evening!...";
+}
+ document.getElementById('demo').innerHTML = greetings;
+
+
+
+ let greetings;
+ let hours = new Date().getHours()
+if(hours < 10)
+{
+  greetings = "good morning!.....";
+}
+else if( hours < 20 )
+{
+  greetings = "good day!...";
+}
+else{
+  greetings = "good evening "
+}
+ document.getElementById('demo').innerHTML = greetings;
+ 
+let text;
+if(Math.random() > 0.5)
+{
+  text = "www.w3cschool.com";
+}
+else{
+  text = "google.com";
+}
+document.getElementById('demo').innerHTML = text;*/
+
+//ternary operator
+
+//let age=16;
+//let text = (age < 18) ?  "minor" : "adult";
+//document.getElementById('demo').innerHTML = text;
+
+//let isMember=true;
+//let text = isMember ? 0.2 : 0;
+//document.getElementById('demo').innerHTML = text;
+
+
+// switch case statement
+
+/*let day;
+let date = new Date().getDay();
+
+switch(date)
+{
+    case 0:
+      day = "sunday";
+      break;
+    case 1:
+      day = "monday";
+      break;
+    case 2:
+      day = "tuesday";
+      break;
+    case 3:
+      day = "wednesday";
+      break;
+    case 4:
+      day = "thursday";
+      break;
+    case 5:
+      day = "friday";
+      break;
+    case 6:
+      day = "saturday";
+      
+}
+document.getElementById('demo').innerHTML= "today is :" + day;*/
+
+//loops
+
+/*let car = ["Amaze" , "celerio", "ciaz", "hondacity" , "Punch", "BMW", "Audi","venue", "vista"];
+let text = "";
+for(let i=0; i< car.length; i++)
+{
+  text += car[i] + "<br>";
+}
+
+document.getElementById('demo').innerHTML = text;*/
+
+//i = 5;
+//for(let i=0; i<=10; i++)
+//{
+ //document.getElementById('demo').innerHTML = i; 
+//}
+//document.getElementById('demo').innerHTML = i;
+/*let i = 0, text="";
+while(i<10)
+{
+  i++;
+  text += "number is : " + i + "<br>";
+}
+document.getElementById('demo').innerHTML = text;   
+let i=0;
+let text="";
+do{
+  
+  text += "number is : " + i + "<br>";
+  i++;
+}
+while(i<10);
+document.getElementById('demo').innerHTML = text; 
+
+
+//numbers
+
+let x=123;
+document.getElementById('demo').innerHTML = x.toString() + '<br>' + (123).toString() + '<br>' + (100+23).toString(); 
+*/
+
+/*function myFunction(a , b)
+{
+  return a * b;
+}
+
+let product1 = myFunction(2, 5);
+document.getElementById('demo').innerHTML= "product is" + product1;*/
+
+/*
+newFunction = ( x, y) => x * y;
+
+let result = newFunction(2, 5);
+document.getElementById('demo').innerHTML= "product is" + result;
+
+
+//functions
+function sumAll()
+{
+  let sum=0;
+  for (let i=0; i< arguments.length; i++)
+  {
+    sum += arguments[i];
+  }
+  return sum;
+}
+document.getElementById('demo').innerHTML=sumAll(1,2,3,4,5);
+
+//arrow funtion
+let hello = () => {
+  return "hello";
+}
+document.getElementById('demo').innerHTML = hello();
+
+let hello = (val) => "hello world\n" + val;
+document.getElementById('demo').innerHTML = hello('seema!!..');
+//dATE
+
+const d = new Date("2015-01-09");
+document.getElementById('demo').innerHTML = d ;  
+ //iso date
+
+ const a= new Date(2000-12);
+ document.getElementById('demo').innerHTML = a; 
+
+ const b= new Date(2000);
+ document.getElementById('demo').innerHTML = b; 
+
+ //const a= new Date();
+ //document.getElementById('demo').innerHTML = a.getFullYear();
+
+ const a= new Date();
+ document.getElementById('demo').innerHTML = a.getMonth();  
+
+ const days = ["sunday","Monday","tuesday","Wednesday","Thursday","Friday","Saturday"];
+ const d = new Date();
+ document.getElementById('demo').innerHTML = days[d.getDay()]; */
+
+ const d = new Date("2025-11-26");
+ document.getElementById('demo').innerHTML = d.getTime(); 
+
+
+
+
+
+
+
+
+</script>
+  
+</body>
+</html>
