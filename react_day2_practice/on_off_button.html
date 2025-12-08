@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On_oFF_button_useState_hook</title>
+</head>
+<body>
+ <div id="root"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        function ToggleButton(){
+            const [isOn, setisOn] = React.useState(true);
+            const handleToggle = () =>{
+                setisOn(!isOn);
+            };
+
+            return (
+                <div>
+                    <h2>On Off Toggle</h2>
+                    <button onClick={handleToggle}>
+                    {isOn ? "ON" : "OFF"}
+                    </button>
+                    <p>Current Status :  {isOn ? "the light is on." : "the light is off"}</p>
+                
+                </div>
+            );
+        }
+        ReactDOM.createRoot(document.getElementById("root")).render(<ToggleButton />);
+    </script>   
+</body>
+</html>
