@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Displaying errors</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        function Form(){
+            const [username, setUsername] = React.useState("");
+            const [password, setPassword] = React.useState("");
+            const [errors, setErrors] = React.useState(null);
+
+            function getValidationErrors(){
+                let validationErrors = [];
+                if(username.trim() === "") validationErrors.push("username cannot be empty");
+                if(password.trim() === "") validationErrors.push("password cannot be empty");
+                return validationErrors;
+            }
+
+            function handleSubmit(e){
+                e.preventDefault();
+                const validationErrors = getValidationErrors();
+
+                if(validationErrors.length > 0)
+                {
+                    setErrors(validationErrors);
+                    return;
+                }
+
+                setErrors(null);
+                setUsername("");
+                setPassword("");
+
+                console.log(username, password);
+            }
+
+            return(
+                <div>
+                    <form onSubmit={handleSubmit}>
+                        <input type="text" placeholder="enter username" value={username} 
+                        onChange={e => setUsername(e.target.value)} />
+
+                        
+                        <input type="password" placeholder="enter password" value={password} 
+                        onChange={e => setPassword(e.target.value)} />
+
+                        <input type="submit" />
+                    </form>
+
+                    <ul id="errors">
+                        {errors ? errors.map((message, index) => 
+                        <li key={index}>{message}</li>) : null}
+                    </ul>
+                </div>
+            );
+
+        }
+    ReactDOM.render(<Form />,document.getElementById("app"));
+  </script>  
+</body>
+</html>
